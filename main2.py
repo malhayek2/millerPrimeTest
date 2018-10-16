@@ -1,4 +1,5 @@
 import random
+import time
 # STEP  1 Is n composite?
 # STEP  2 select an integer b at random with 1 <b<n 
 # STEP  3 whether n passes Millers test to the base b
@@ -47,8 +48,6 @@ def isPrime(num, k):
     if (k <= 3):
         print("for better result please set k to 3 < k < 10")	
     return millerTest(num, k)
-
-#everything is done but since the professor think my code will fail i had to create this test.
 def millionPrimeTest(k):
     millionPrime = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,
 103,107,109,113,127,131,137,139,149,151,157,163,167,173,179,181,191,193,197,
@@ -7739,7 +7738,16 @@ def millionPrimeTest(k):
         #print(passedCounter)
         #print(failedCounter)
         #print(len(millionPrime))
-
+    beforeTest = int(round(time.time() * 1000))
+    for x in range(len(millionPrime)):
+        test_prime(x)
+    afterTest = int(round(time.time() * 1000))
+    print("regular prime test took ", afterTest-beforeTest)
+    beforeTest = int(round(time.time() * 1000))
+    for x in range(len(millionPrime)):
+        isPrime(x,k)
+    afterTest = int(round(time.time() * 1000))
+    print("miller test took ", afterTest-beforeTest)
 
 
 
@@ -7792,4 +7800,4 @@ while ans:
     elif choice !="":
       print("\n Not Valid Choice Try again")
 #140 AVG 
-# test 1-1000000 prime numbes against give alg 
+# test 1-1000000 prime numbers against give alg
