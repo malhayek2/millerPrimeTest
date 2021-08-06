@@ -7767,37 +7767,38 @@ def test_prime(n):
         return True
 
 
+print('hello')
+print(test_prime(981061))
+isPrime(981061, 5)
+# ans=True
+# while ans:
+#     print ("""
+#     1.Run 1-1M Prime Test
+#     2.Run Monte Carlo Test
+#     3.Run regular Prime Test
+#     4.Exit/Quit
+#     """)
+#     choice=input("What would you like to do? ")
+#     if choice=="1":
 
-
-ans=True
-while ans:
-    print ("""
-    1.Run 1-1M Prime Test
-    2.Run Monte Carlo Test
-    3.Run regular Prime Test
-    4.Exit/Quit
-    """)
-    choice=input("What would you like to do? ")
-    if choice=="1":
-
-      k = input('Enter your k (3-10) :')
-      loop = int(k)
-      millionPrimeTest(loop)
-    elif choice=="2":
-        n = input('Enter your number in question:')
-        k = input('Enter your k (3-10) :')
-        number = int(n)
-        loop = int(k)
-        result = isPrime(number, loop)
-        print(result)
-    elif choice=="3":
-        n = input('Enter your number in question:')
-        num = int(n)
-        print(test_prime(num))
-    elif choice=="4":
-      print("\n Goodbye")
-      ans = False
-    elif choice !="":
-      print("\n Not Valid Choice Try again")
+#       k = input('Enter your k (3-10) :')
+#       loop = int(k)
+#       millionPrimeTest(loop)
+#     elif choice=="2":
+#         n = input('Enter your number in question:')
+#         k = input('Enter your k (3-10) :')
+#         number = int(n)
+#         loop = int(k)
+#         result = isPrime(number, loop)
+#         print(result)
+#     elif choice=="3":
+#         n = input('Enter your number in question:')
+#         num = int(n)
+#         print(test_prime(num))
+#     elif choice=="4":
+#       print("\n Goodbye")
+#       ans = False
+#     elif choice !="":
+#       print("\n Not Valid Choice Try again")
 #140 AVG 
 # test 1-1000000 prime numbers against give alg
